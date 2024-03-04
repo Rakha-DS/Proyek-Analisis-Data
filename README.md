@@ -5,7 +5,7 @@
 pip install pandas matplotlib seaborn streamlit
 ```
 
-## Run steamlit app
+## Run streamlit app
 ```
 cd (folder containing dashboard)
 streamlit run bikeRentalDashboard.py
