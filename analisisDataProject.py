@@ -7,8 +7,10 @@ import seaborn as sns
 #How does weather affect the bike rental servicee?
 #At what day of the week does the rental hit it's peak number of customers?
 
-day_df = pd.read_csv('day.csv')
-hour_df = pd.read_csv('hour.csv')
+dtLink = lambda x : f"https://raw.githubusercontent.com/Rakha-DS/Proyek-Analisis-Data/main/{x}.csv"
+
+day_df = pd.read_csv(dtLink("day"))
+hour_df = pd.read_csv(dtLink("hour"))
 
 #Data Wrangling
 #Memeriksa tipe data pada dataset

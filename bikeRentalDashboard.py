@@ -1,8 +1,10 @@
 import pandas as pd
 import streamlit as st
 
-day_df = pd.read_csv('day.csv')
-hour_df = pd.read_csv('hour.csv')
+dtLink = lambda x : f"https://raw.githubusercontent.com/Rakha-DS/Proyek-Analisis-Data/main/{x}.csv"
+
+day_df = pd.read_csv(dtLink("day"))
+hour_df = pd.read_csv(dtLink("hour"))
 
 #Data Wrangling
 dteday_columns = ["dteday"]
@@ -51,4 +53,3 @@ elif option == 'Peak Rental Day':
 
     avgRentalByDay = day_df.groupby(day_df['dteday'].dt.day_of_week)['cnt'].mean()
     st.bar_chart(avgRentalByDay.rename(index=numToDay))
-
