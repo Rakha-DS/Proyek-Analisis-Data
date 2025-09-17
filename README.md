@@ -1,4 +1,4 @@
-# Data Analisys Project for Dicoding
+# Data Analysis Project for Dicoding
 
 ## Installing the requirements
 ```
